@@ -176,7 +176,7 @@ div.item {
   margin-left: 0.5rem;
 }
 #timeline section.year section ul li:before {
-  content: "◾";
+  content: "";
   margin-left: -0.5rem;
   padding-right: 0.3rem;
 }
