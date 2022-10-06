@@ -1,14 +1,30 @@
-var currency = "BTC";
-var url = "https://api.coinbase.com/v2/exchange-rates?currency=" + currency;
-var usd = document.querySelector(".usd");
-function makeRequest() {
-  xhr = new XMLHttpRequest();
-  xhr.onload = function() {
-    var response = JSON.parse(this.responseText);
-    usd.innerHTML = response.data.rates.USD + " USD";
-  };
-  xhr.open("GET", url, true);
-  xhr.setRequestHeader("CB-VERSION", "2018-01-01");
-  xhr.send();
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgs = document.getElementsByClassName("grid-item");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+for (var i = 0; i < imgs.length; i++) {
+
+  imgs.item(i).onclick = function(){
+    console.log(imgs.item(i));
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+
 }
-makeRequest();
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+modal.onclick = function() {
+  modal.style.display = "none";
+}
