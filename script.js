@@ -6,15 +6,29 @@ var imgs = document.getElementsByClassName("grid-item");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 
-for (var i = 0; i < imgs.length; i++) {
+// for (var i = 0; i < imgs.length; i++) {
 
-  imgs.item(i).onclick = function(){
-    console.log(imgs.item(i));
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  }
+//   imgs.item(i).onclick = function(){
+//     modal.style.display = "block";
+//     var imgsrc = this.src;
+//     imgsrc.replace('/thumbs/', '/images/');
+//     imgsrc.replace('_thumb.png', '.png');
+//     console.log(imgsrc);
+//     modalImg.src = imgsrc;
+//     captionText.innerHTML = this.alt;
+//   }
 
+// }
+
+function openModal(src){
+  modal.style.display = "block";
+  var imgsrc = src;
+  imgsrc = imgsrc.replace('/thumbs/', '/images/');
+  imgsrc = imgsrc.replace('_thumb.png', '.png');
+  imgsrc = imgsrc.replace('_thumb.jpg', '.jpg');
+  console.log(imgsrc);
+  modalImg.src = imgsrc;
+  // captionText.innerHTML = this.alt;
 }
 
 // Get the <span> element that closes the modal
