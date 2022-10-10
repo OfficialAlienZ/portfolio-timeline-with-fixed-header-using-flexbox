@@ -39,7 +39,7 @@ function openModal(src) {
 
     if (gridContainer.childNodes[i].firstElementChild == src) {
       slideIndex = (i - 1) / 2
-      console.log(slideIndex)
+      // console.log(slideIndex)
     }
 
     // swiperSlideItems.push(gridContainer.childNodes[i]);
@@ -48,7 +48,7 @@ function openModal(src) {
     imgsrc = imgsrc.replace('_thumb.png', '.png');
     imgsrc = imgsrc.replace('_thumb.jpg', '.jpg');
     imgsrcArray.push('<div class="swiper-slide"><img loading="lazy" class="easeload-gallery" onload="this.style.opacity=1" src=' + imgsrc + '></div>');
-    console.log(imgsrc)
+    // console.log(imgsrc)
 
   }
 
