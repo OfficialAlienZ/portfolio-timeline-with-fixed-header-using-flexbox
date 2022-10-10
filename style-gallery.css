@@ -1,32 +1,37 @@
 .grid-container {
-    columns: 5 100px;
-    column-gap: 1.5rem;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 16px;
+  columns: 5 100px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 16px;
 }
 .grid-container div {
-    width: 150px;
-    margin: 0 1.5rem 1.5rem 0;
-    display: inline-block;
-    width: 100%;
-    /* border: solid 2px black; */
-    /* padding: 5px; */
-    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); */
-    /* box-shadow: 0 0 16px #333; */
-    border-radius: 8px;
-    transition: all 0.25s ease-in-out;
+  width: 150px;
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+  /* border: solid 2px black; */
+  /* padding: 5px; */
+  /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); */
+  /* box-shadow: 0 0 16px #333; */
+  border-radius: 8px;
+  transition: all 0.25s ease-in-out;
 }
 .grid-container div img {
-    width: 100%;
-    border-radius: 8px;
-    transition: all 0.25s ease-in-out;
-    box-shadow: 2px 1px 8px 2px rgb(0 0 0 / 50%);
-    cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 1px 8px 2px rgb(0 0 0 / 50%);
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .grid-container div img:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 }
 .grid-container div p {
-    margin: 5px 0;
-    padding: 0;
-    text-align: center;
-    font-style: italic;
+  margin: 5px 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
 }
