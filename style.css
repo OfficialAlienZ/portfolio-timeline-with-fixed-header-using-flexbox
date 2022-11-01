@@ -55,6 +55,7 @@ div.header:after {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0);
   /* IE6-9 */
+  pointer-events: none;
 }
 div.header h1 {
   margin-top: 0.8rem;
