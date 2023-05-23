@@ -6,20 +6,6 @@ var imgs = document.getElementsByClassName("grid-item");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 
-// for (var i = 0; i < imgs.length; i++) {
-
-//   imgs.item(i).onclick = function(){
-//     modal.style.display = "block";
-//     var imgsrc = this.src;
-//     imgsrc.replace('/thumbs/', '/images/');
-//     imgsrc.replace('_thumb.png', '.png');
-//     console.log(imgsrc);
-//     modalImg.src = imgsrc;
-//     captionText.innerHTML = this.alt;
-//   }
-
-// }
-
 function openModal(src) {
   modal.style.display = "block";
 
@@ -54,28 +40,8 @@ function openModal(src) {
 
   swiper.virtual.appendSlide(imgsrcArray)
 
-  // for (var i = 1; i < imgsrcArray.length; i ++) {
-
-  //   swiper.virtual.appendSlide('<div class="swiper-slide"><img loading="lazy" class="easeload-gallery" onload="this.style.opacity=1" src=' + imgsrcArray[i] + '></div>')
-
-  // }
-
   swiper.slideTo(slideIndex, 0, false);
 
-  // console.log(swiperSlideItems)
-
-
-  // var swiperSlideItem = document.createElement("div");
-  // swiperSlideItem.className = "swiper-slide"
-  // document.getElementsByClassName("swiper-wrapper")[0].appendChild(swiperSlideItem);
-
-  // var imgsrc = src;
-  // imgsrc = imgsrc.replace('/thumbs/', '/images/');
-  // imgsrc = imgsrc.replace('_thumb.png', '.png');
-  // imgsrc = imgsrc.replace('_thumb.jpg', '.jpg');
-  // console.log(imgsrc);
-  // modalImg.src = imgsrc;
-  // captionText.innerHTML = this.alt;
 }
 
 // Get the <span> element that closes the modal
