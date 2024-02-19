@@ -115,7 +115,7 @@ div.item {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 #timeline div:after {
@@ -366,4 +366,82 @@ h2:has(> .switch)::before {
   box-shadow: 0px 0 16px 2px #52687d;
   opacity: 0.6;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), hsl(209deg 24% 80% / 58%), rgba(0, 0, 0, 0));
+  cursor: pointer;
+}
+
+#projects {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  width: 90%;
+}
+
+.project-row {
+  display: flex;
+  width: 100%;
+}
+
+.project-item {
+  flex: 1;
+  padding: 10px;
+}
+
+.project-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-item.reversed {
+  order: -1;
+  /* Reverse the order for every other row */
+}
+
+.project-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: hsl(209 20% 50% / 1);
+}
+
+.project-date {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.project-description {
+  margin-top: 10px;
+}
+
+.project-tools {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-top: 10px;
+}
+
+.project-tools li {
+  margin-right: 5px;
+}
+
+.project-tools img {
+  max-width: 48px; /* Adjust as needed */
+  height: auto;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project-item {
+    order: initial; /* Reset the order for mobile view */
+  }
+
+  .grid-container {
+    width: 100% !important; 
+  }
 }

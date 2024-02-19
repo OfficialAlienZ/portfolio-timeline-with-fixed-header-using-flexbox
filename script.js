@@ -76,3 +76,15 @@ var swiper = new Swiper(".mySwiper", {
     enabled: true
   }
 });
+
+function toggleTimeline() {
+  var timeline = document.getElementById("timeline");
+  var projects = document.getElementById("projects");
+  if (timeline.style.display === "none") {
+    timeline.style.display = "table";
+    projects.style.display = "none";
+  } else {
+    timeline.style.display = "none";
+    projects.style.display = "flex";
+  }
+}
