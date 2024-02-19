@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:200,400,500);
+
 @font-face {
   font-family: 'icomoon';
-  src:  url('./assets/fonts/icomoon.eot?fdnigd');
-  src:  url('./assets/fonts/icomoon.eot?fdnigd#iefix') format('embedded-opentype'),
+  src: url('./assets/fonts/icomoon.eot?fdnigd');
+  src: url('./assets/fonts/icomoon.eot?fdnigd#iefix') format('embedded-opentype'),
     url('./assets/fonts/icomoon.ttf?fdnigd') format('truetype'),
     url('./assets/fonts/icomoon.woff?fdnigd') format('woff'),
     url('./assets/fonts/icomoon.svg?fdnigd#icomoon') format('svg');
@@ -16,9 +17,11 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   height: 100%;
 }
+
 body {
   height: inherit;
   display: flex;
@@ -28,19 +31,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #79838c;
 }
+
 a {
   color: #50585f;
   text-decoration: none;
 }
+
 a:hover {
   color: #383e44;
 }
+
 div.container {
   display: flex;
   flex: auto;
   flex-direction: column;
   max-height: 100%;
 }
+
 div.header {
   height: auto;
   text-align: center;
@@ -50,6 +57,7 @@ div.header {
   padding: 1.3rem 1rem 2.3rem 1rem;
   position: relative;
 }
+
 div.header:after {
   content: "";
   position: absolute;
@@ -65,10 +73,11 @@ div.header:after {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
   /* IE6-9 */
   pointer-events: none;
 }
+
 div.header h1 {
   margin-top: 0.8rem;
   margin-bottom: 0.5rem;
@@ -77,25 +86,29 @@ div.header h1 {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
+
 @media (min-width: 62em) {
   div.header h1 {
     font-size: 1.9em;
     letter-spacing: 0.2rem;
   }
 }
+
 div.header h2 {
-  font-size: 1.1em;
+  font-size: 16px;
   font-weight: 400;
   color: #cfd7de;
-  max-width: 30rem;
+  max-width: 80%;
   margin: auto;
 }
+
 div.item {
   display: flex;
   flex: auto;
   overflow-y: auto;
   padding: 0rem 1rem 0rem 1rem;
 }
+
 #timeline {
   position: relative;
   display: table;
@@ -104,6 +117,7 @@ div.item {
   margin-right: auto;
   margin-top: 5rem;
 }
+
 #timeline div:after {
   content: "";
   width: 2px;
@@ -114,6 +128,7 @@ div.item {
   z-index: 1;
   background: #c5c5c5;
 }
+
 #timeline h3 {
   position: -webkit-sticky;
   position: sticky;
@@ -123,23 +138,28 @@ div.item {
   font-size: 1em;
   font-weight: 400;
 }
+
 @media (min-width: 62em) {
   #timeline h3 {
     font-size: 1.1em;
   }
 }
+
 #timeline section.year {
   position: relative;
 }
+
 #timeline section.year:first-child section {
   margin-top: -1.3em;
   padding-bottom: 0px;
 }
+
 #timeline section.year section {
   position: relative;
   padding-bottom: 1.25em;
   margin-bottom: 2.2em;
 }
+
 #timeline section.year section h4 {
   position: absolute;
   bottom: 0;
@@ -150,11 +170,13 @@ div.item {
   padding: 0 0 0 89px;
   color: #c5c5c5;
 }
+
 @media (min-width: 62em) {
   #timeline section.year section h4 {
     font-size: 1em;
   }
 }
+
 #timeline section.year section ul {
   list-style-type: none;
   padding: 0 0 0 75px;
@@ -162,15 +184,18 @@ div.item {
   max-width: 32rem;
   font-size: 1em;
 }
+
 @media (min-width: 62em) {
   #timeline section.year section ul {
     font-size: 1.1em;
     padding: 0 0 0 81px;
   }
 }
+
 #timeline section.year section ul:last-child {
   margin-bottom: 0;
 }
+
 #timeline section.year section ul:first-of-type:after {
   content: "";
   width: 10px;
@@ -186,24 +211,30 @@ div.item {
   top: 3px;
   z-index: 2;
 }
+
 #timeline section.year section ul li {
   margin-left: 0.5rem;
 }
+
 #timeline section.year section ul li:before {
   content: "";
   margin-left: -0.5rem;
   padding-right: 0.3rem;
 }
+
 #timeline section.year section ul li:not(:first-child) {
   margin-top: 0.5rem;
 }
+
 #timeline section.year section ul li span.price {
   color: mediumturquoise;
   font-weight: 500;
 }
+
 .usd {
   display: inline;
 }
+
 svg {
   border: 3px solid white;
   border-radius: 50%;
@@ -218,12 +249,14 @@ a {
   transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1);
   color: hsl(210deg 28% 44%);
 }
+
 a:after {
   /* <div class="icon-" style="font-family: icomoon; display: inline; font-size: 0.9em"></div>  */
   content: "";
-  font-family: icomoon; 
-  display: inline; 
+  font-family: icomoon;
+  display: inline;
   font-size: 0.9em"
+
 }
 
 .yt-container {
@@ -232,6 +265,7 @@ a:after {
   height: 0;
   padding-bottom: 56.25%;
 }
+
 .yt-video {
   position: absolute;
   top: 0;
@@ -309,4 +343,27 @@ a:after {
 
 .swiper-pagination-bullet-active {
   background-color: hsl(210, 28%, 44%) !important;
+}
+
+.switch {
+  color: #d9e2eb;
+  text-decoration: none;
+  border-bottom: 1px solid hsl(210, 28%, 44%);
+  box-shadow: inset 0 -2px 0 hsl(210deg 18.61% 78.9%);
+  transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1);
+  display: inline;
+  text-shadow: 4px 4px 4px #1a3755;
+}
+
+h2:has(> .switch)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  /* background-color: hsl(209deg 24% 80% / 58%); */
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-shadow: 0px 0 16px 2px #52687d;
+  opacity: 0.6;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), hsl(209deg 24% 80% / 58%), rgba(0, 0, 0, 0));
 }
