@@ -420,6 +420,7 @@ h2:has(> .switch)::before {
   padding: 0;
   display: flex;
   margin-top: 10px;
+  justify-content: center
 }
 
 .project-tools li {
@@ -427,8 +428,8 @@ h2:has(> .switch)::before {
 }
 
 .project-tools img {
-  max-width: 48px; /* Adjust as needed */
-  height: auto;
+  max-height: 48px;
+  width: auto;
 }
 
 /* Media query for mobile devices */
