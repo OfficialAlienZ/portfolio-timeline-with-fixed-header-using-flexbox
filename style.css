@@ -111,7 +111,7 @@ div.item {
 
 #timeline {
   position: relative;
-  display: table;
+  display: none;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -370,7 +370,7 @@ h2:has(> .switch)::before {
 }
 
 #projects {
-  display: none;
+  display: flex;
   flex-direction: column;
   position: relative;
   height: 100%;
