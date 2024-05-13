@@ -80,11 +80,18 @@ var swiper = new Swiper(".mySwiper", {
 function toggleTimeline() {
   var timeline = document.getElementById("timeline");
   var projects = document.getElementById("projects");
+  var switchElement = document.getElementById("switch");
   if (timeline.style.display === "none") {
+    //switch to timeline view
     timeline.style.display = "table";
     projects.style.display = "none";
+    switchElement.innerHTML = "project view."
   } else {
+    //switch to projects view
     timeline.style.display = "none";
     projects.style.display = "flex";
+    switchElement.innerHTML = "timeline view."
   }
 }
+
+toggleTimeline() // switch to project view as default
