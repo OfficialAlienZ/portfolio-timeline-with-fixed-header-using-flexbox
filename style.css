@@ -106,12 +106,14 @@ div.item {
   display: flex;
   flex: auto;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 0rem 1rem 0rem 1rem;
 }
 
 #timeline {
   position: relative;
-  display: none;
+  /* display: none; */
+  display: table;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -370,7 +372,8 @@ h2:has(> .switch)::before {
 }
 
 #projects {
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-direction: column;
   position: relative;
   height: 100%;
@@ -445,4 +448,58 @@ h2:has(> .switch)::before {
   .grid-container {
     width: 100% !important; 
   }
+}
+
+.toggle-switch-vertical {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 80px;
+  background-color: #222;
+  border-radius: 999px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 1000;
+  overflow: hidden;
+  border: #ffffff;
+  border-style: solid;
+}
+
+/* Icons stacked vertically */
+.toggle-switch-vertical .icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+  filter: invert(0.5) opacity(1);
+  transition: filter 0.3s;
+}
+
+.toggle-switch-vertical .icon.active {
+  filter: invert(0.5) opacity(1);
+}
+
+/* Thumb moves vertically */
+.toggle-thumb {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  transition: top 0.3s ease;
+  z-index: 1;
+}
+
+/* Move thumb to bottom on 'projects' view */
+.toggle-switch-vertical.projects .toggle-thumb {
+  top: calc(100% - 42px); /* 100% - thumb size - padding */
 }

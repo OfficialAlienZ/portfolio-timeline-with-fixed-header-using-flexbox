@@ -78,20 +78,32 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 function toggleTimeline() {
-  var timeline = document.getElementById("timeline");
-  var projects = document.getElementById("projects");
-  var switchElement = document.getElementById("switch");
-  if (timeline.style.display === "none") {
-    //switch to timeline view
-    timeline.style.display = "table";
-    projects.style.display = "none";
-    switchElement.innerHTML = "project view."
-  } else {
-    //switch to projects view
+  const toggleBtn = document.getElementById('toggleViewBtn');
+  const timeline = document.getElementById("timeline");
+  const projects = document.getElementById("projects");
+
+  const subtitleTimeline = document.getElementById('subtitle-timeline');
+  const subtitleProject = document.getElementById('subtitle-project');
+
+  const isCurrentlyTimeline = !toggleBtn.classList.contains('projects');
+
+  if (isCurrentlyTimeline) {
+    // Switch to project view
+    toggleBtn.classList.add('projects');
     timeline.style.display = "none";
     projects.style.display = "flex";
-    switchElement.innerHTML = "timeline view."
+    subtitleTimeline.style.display = "none";
+    subtitleProject.style.display = "block";
+  } else {
+    // Switch to timeline view
+    toggleBtn.classList.remove('projects');
+    timeline.style.display = "table";
+    projects.style.display = "none";
+    subtitleTimeline.style.display = "block";
+    subtitleProject.style.display = "none";
   }
-}
 
-toggleTimeline() // switch to project view as default
+  document.querySelector('.left').classList.toggle('active', isCurrentlyTimeline);
+  document.querySelector('.right').classList.toggle('active', !isCurrentlyTimeline);
+
+}
