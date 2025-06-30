@@ -479,7 +479,7 @@ h2:has(> .switch)::before {
   z-index: 2;
   pointer-events: none;
   filter: invert(0.5) opacity(1);
-  transition: filter 0.3s;
+  transition: filter 0.3s cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 .toggle-switch-vertical .icon.active {
